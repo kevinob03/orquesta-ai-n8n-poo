@@ -1,0 +1,5 @@
+{
+  "name": "WF_Proveedor_Buscar",
+  "nodes": [{"parameters": {}, "id": "1", "name": "When Executed by Another Workflow", "type": "n8n-nodes-base.executeWorkflowTrigger", "typeVersion": 1, "position": [220,300]}, {"parameters": {"jsCode": "return [{json:{ok:false,data:null,error:'Pendiente configurar credencial PostgreSQL/Supabase y búsqueda parametrizada de proveedor.'}}];"}, "id": "2", "name": "Solicitar conexión", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [470,300]}],
+  "connections": {"When Executed by Another Workflow":{"main":[[{"node":"Solicitar conexión","type":"main","index":0}]]}}, "active": false, "settings": {}, "versionId": ""
+}

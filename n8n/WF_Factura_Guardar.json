@@ -1,0 +1,5 @@
+{
+  "name": "WF_Factura_Guardar",
+  "nodes": [{"parameters": {}, "id": "1", "name": "When Executed by Another Workflow", "type": "n8n-nodes-base.executeWorkflowTrigger", "typeVersion": 1, "position": [220,300]}, {"parameters": {"jsCode": "const x=$input.first().json; if (!x.ok || !x.data) return [{json:{ok:false,data:null,error:x.error||'Factura no validada'}}]; return [{json:{ok:false,data:null,error:'Pendiente configurar credencial PostgreSQL/Supabase y nodo de inserción; no se escribe sin configuración.'}}];"}, "id": "2", "name": "Requerir validación y conexión", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [470,300]}],
+  "connections": {"When Executed by Another Workflow":{"main":[[{"node":"Requerir validación y conexión","type":"main","index":0}]]}}, "active": false, "settings": {}, "versionId": ""
+}

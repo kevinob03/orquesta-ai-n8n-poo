@@ -1,0 +1,24 @@
+{
+  "name": "orquestai-mvp",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test",
+    "n8n:validate": "node scripts/import-n8n.mjs --check-only",
+    "n8n:import": "node scripts/import-n8n.mjs",
+    "n8n:start": "n8n start"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.118.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "5.2.0",
+    "vite": "7.3.7"
+  }
+}
