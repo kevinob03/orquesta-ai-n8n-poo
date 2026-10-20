@@ -33,6 +33,8 @@ npm run n8n:start
 
 El último comando deja el editor en `http://localhost:5678`. La importación es idempotente por nombre: si un workflow ya existe, no crea otra copia. También se pueden importar manualmente mediante **Workflows → Import from File**:
 
+El paquete alternativo completo con DeepSeek y sus seis sub-workflows está en `artifacts/flujo-n8n.json`. Se importa desde una terminal, con n8n detenido, mediante `n8n import:workflow --input="artifacts/flujo-n8n.json"`. Antes de activarlo, sustituye `https://TU-PROYECTO.supabase.co` por la URL pública real del proyecto y asigna las credenciales desde n8n.
+
 - `WF_Agente_Orquestador.json` expone `POST /webhook/orquestai-chat` y responde el contrato.
 - `WF_Factura_Validar.json` contiene la validación determinista.
 - `WF_Factura_Guardar.json`, `WF_Factura_Consultar.json` y `WF_Proveedor_Buscar.json` son sub-workflows encapsulados y fallan de forma explícita hasta recibir sus credenciales/conexiones.
